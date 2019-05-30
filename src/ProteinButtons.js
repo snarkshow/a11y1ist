@@ -1,11 +1,11 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 import firebase from './firebase';
 
-class VegButtons extends Component {
+class ProteinButtons extends Component {
     constructor() {
         super();
         this.state = {
-            vegetables: [],
+            protein: [],
         }
     }
     handleClick = (event) => {
@@ -21,18 +21,18 @@ class VegButtons extends Component {
 
     render() {
         return (
-            <div className="vegetableList">
-                {this.state.vegetables.map((veg, index) => {
-                    return <button className="groceryButton" key={index} onClick={this.handleClick}>{veg}</button>
-                })}
-             
-            </div>
+            <div className="proteinList">
 
+                {this.state.protein.map((protein, index) => {
+                    return <button className="groceryButton" key={index} onClick={this.handleClick}>{protein}</button>
+                })}
+
+            </div>
         );
     }
 
     componentDidMount() {
-        const dbRef = firebase.database().ref("allVeg");
+        const dbRef = firebase.database().ref("allProtein");
         dbRef.on('value', (response) => {
             const newState = [];
             const data = response.val();
@@ -40,10 +40,10 @@ class VegButtons extends Component {
                 newState.push(data[key]);
             }
             this.setState({
-                vegetables: newState
+                protein: newState
             });
             // console.log(response.val());
         });
     }
 }
-export default VegButtons;
+export default ProteinButtons;
