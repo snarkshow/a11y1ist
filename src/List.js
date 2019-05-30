@@ -9,18 +9,18 @@ class List extends Component {
         }
     }
     
-    removeItem = (bookID) => {
-        const dbRef = firebase.database().ref("savedItems");
-        dbRef.child(bookId).remove();
+    removeItem = (item) => {
+        const dbRef = firebase.database().ref(`savedItems`);
+        console.log(item, `I was clicked`);
+        dbRef.child(item).remove();
     }
     render() {
         return (
             <div>
                 <ul>
                     {this.state.userList.map((listItem) => {
-                        return <li key={'itemKey'}>{listItem.name} 
-                        <button onClick={() => this.removeItem(listItem.name)}>Remove item</button></li>
-                        
+                        return <li key={listItem.key}> {listItem.name} 
+                        <button onClick={() => this.removeItem(listItem.key)}>X</button></li>
                     })}
                     
                 </ul>
@@ -31,17 +31,17 @@ class List extends Component {
         const dbRef = firebase.database().ref("savedItems");
         dbRef.on('value', (response) => {
             const newState = [];
-            const listArray = (response.val());
-            for (let key in listArray) {
-                newState.push({key:key, name:listArray[key]});
+            const listObject = (response.val());
+            for (let property in listObject) {
+                newState.push({key:property, name:listObject[property]});
             }
             this.setState({
                 userList: newState,
             });
             
         });
+
     }
 }
 
 export default List;
-    
