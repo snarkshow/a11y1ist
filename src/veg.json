@@ -1,0 +1,11 @@
+{
+    "allGroceries":{
+        "veg1":"carrots",
+        "veg2":"broccoli",
+        "veg3":"onions",
+        "veg4":"corn",
+        "veg5":"beans",
+        "veg6":"spinach"
+        
+    }
+}
