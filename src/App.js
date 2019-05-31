@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component} from 'react';
 import firebase from './firebase';
 import { Link, animateScroll as scroll } from "react-scroll";
 import Header from './Header.js';
@@ -23,33 +23,30 @@ class App extends Component{
         const buttonValue = event.target.textContent;
         const dbRef = firebase.database().ref(`savedItems`);
         dbRef.push(buttonValue);
-        // const users = firebase.database().ref('users');
-        console.log(`I've been clicked`, buttonValue)
+
     }
 
-    // arrayDetect = (event)=>{
-    //   let button = this.state.vegetables;
-    //   console.log(button);
-    // }
 
 
   render(){
     return(
       <div>
-		<div className="AppScreen">
+        <div className="AppScreen" id="AppScreen">
 			<Header />
 			<div className="Buttons">
 				<div className="vegetableList">
 					<Button
 						ingredients={this.state.vegetables}
-						handleClick={this.handleClick}
+            handleClick={this.handleClick}
+            tabindex={this.tabIndex}
 					/>
 				</div>
 		
 				<div className="fruitList">
 					<Button
 					ingredients={this.state.fruit}
-					handleClick={this.handleClick}
+          handleClick={this.handleClick}
+          
 					/>
 				</div>
 					<div className="proteinList">
@@ -59,29 +56,38 @@ class App extends Component{
 					/>
 				</div>
 			</div>
-			<Link 
-				className="GetList"
-				to="ListScreen"
-				duration={1000}
-		
-				smooth={true}
-			>
-				Get My List!
+      {/* <button tabIndex="0"> */}
+            <Link
+              tabIndex="0"
+              className="GetList"
+              to="ListScreen"
+              duration={1000}
+              smooth={true}
+              onSubmit={this.keyPress}
+              href="#ListScreen"
+            >
+              Get My List!
 			</Link>
+  
+			
 		</div>
-		<div className="ListScreen">
+		<div className="ListScreen" id="ListScreen">
 			<List />
-			<Link
-			className="BackToTop"
-			to="AppScreen"
-			duration={1000}
-			offset={-70}
+          {/* <button > */}
+            <Link
+              tabIndex="0"
+              className="BackToTop"
+              to="AppScreen"
+              duration={1000}
+              offset={-70}
+              smooth={true}
+              href="#ListScreen"
 
-			smooth={true}
-
-			>
-			Take me back to the top
+            >
+              Take me back to the top
 			</Link>
+      {/* </button> */}
+			
 		</div>
       </div>
        
@@ -99,7 +105,7 @@ class App extends Component{
       this.setState({
         vegetables: newState
       });
-      // console.log(response.val());
+  
     });
 
     const dbRefFruit = firebase.database().ref("allFruit");
@@ -112,7 +118,7 @@ class App extends Component{
       this.setState({
         fruit: newState
       });
-      // console.log(response.val());
+
     });
 
     const dbRefProtein = firebase.database().ref("allProtein");
@@ -125,7 +131,7 @@ class App extends Component{
       this.setState({
         protein: newState
       });
-      // console.log(response.val());
+
     });
   }
 
