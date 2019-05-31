@@ -5,51 +5,60 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 .visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
 
 ul{
-  list-style: none;
+	list-style: none;
 }
 
 .groceryList li{
-  display: flex;
+	display: flex;
 }
 
 @media (max-width: 320px){
-  .Buttons{
-  display: flex;
-  flex-direction: column;
+	.Buttons{
+		display: flex;
+		flex-direction: column;
+	}
 
-}
+	button{
+		border-radius: 5px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
-button{
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
+	.groceryButton{ 
+		margin: 10px;
+		height: 50px;
+		flex-shrink: 0;
+		width: calc(33.33% - 20px);
+	}
 
-.groceryButton{ 
-  margin: 10px;
-  height: 50px;
-  /* width: 70px; */
-  flex-shrink: 0;
-  width: calc(33.33% - 20px);
-}
+	.List {
+		display: flex;
+		flex-wrap: wrap;
 
-.vegetableList,
-.fruitList,
-.proteinList {
-  display: flex;
-  flex-wrap: wrap;
+	}
 
-}
+	.AppScreen {
+		height: 100vh;
+	}
 
-.vegetableList button{
-  background-color: green;
-}
+	.BackToTop{
+		background-color: gray;
+		display: block;
+		position: sticky;
+		right: 0; left: 0; 
+		width: 100%;
+	}
 
-.AppScreen {
-  height: 100vh;
-}
+	.vegetableList button{
+		background: green;
+	}
+	.fruitList button{
+		background: lightblue;
+	}
+	.proteinList button{
+		background: rgb(255, 94, 0);
+	}
 
 }
 

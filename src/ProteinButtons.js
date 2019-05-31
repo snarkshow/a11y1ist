@@ -32,8 +32,8 @@ class ProteinButtons extends Component {
     }
 
     componentDidMount() {
-        const dbRef = firebase.database().ref("allProtein");
-        dbRef.on('value', (response) => {
+        const dbRefProtein = firebase.database().ref("allProtein");
+        dbRefProtein.on('value', (response) => {
             const newState = [];
             const data = response.val();
             for (let key in data) {
