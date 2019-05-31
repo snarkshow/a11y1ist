@@ -30,7 +30,7 @@ class App extends Component{
 
   render(){
     return(
-      <div>
+      <div className="App">
         <div className="AppScreen" id="AppScreen">
 			<Header />
 			<div className="Buttons">
@@ -72,22 +72,29 @@ class App extends Component{
 			
 		</div>
 		<div className="ListScreen" id="ListScreen">
-			<List />
-          {/* <button > */}
-            <Link
-              tabIndex="0"
-              className="BackToTop"
-              to="AppScreen"
-              duration={1000}
-              offset={-70}
-              smooth={true}
-              href="#ListScreen"
+			<div class="paper">
+				<div class="pattern">
+					<div class="content">
+						
+						<List />
 
-            >
-              Take me back to the top
-			</Link>
-      {/* </button> */}
-			
+						<Link
+						tabIndex="0"
+						className="BackToTop"
+						to="AppScreen"
+						duration={1000}
+						offset={-70}
+						smooth={true}
+						href="#AppScreen"
+
+						>
+						Take me back to the top
+						</Link>
+					</div>
+				</div>
+			</div>
+
+
 		</div>
       </div>
        

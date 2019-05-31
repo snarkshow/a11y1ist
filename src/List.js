@@ -1,6 +1,7 @@
 import React, { Component} from 'react';
 import firebase from './firebase';
 
+
 class List extends Component {
     constructor(props){
         super(props);
@@ -16,9 +17,10 @@ class List extends Component {
     render() {
         return (
             <div>
+
                 <ul className="groceryList">
                     {this.state.userList.map((listItem) => {
-                        return <li key={listItem.key}>  {listItem.name} <button onClick={() => this.removeItem(listItem.key)}>X</button></li>
+                        return <li key={listItem.key}>  {listItem.name} <a className="removeItem" onClick={() => this.removeItem(listItem.key)}>❌</a></li>
                     })}
                     
                 </ul>
