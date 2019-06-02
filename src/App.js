@@ -3,8 +3,6 @@ import firebase from './firebase';
 import { Link, animateScroll as scroll } from "react-scroll";
 import Header from './Header.js';
 import Button from './Button.js';
-import QuickNav from './QuickNav';
-// import CurrentDate from './CurrentDate.js';
 import List from './List.js';
 import './App.css';
 
@@ -15,9 +13,11 @@ class App extends Component{
       vegetables: [],
       fruit: [],
       protein: []
-    }
-  }
- 
+	}
+
+  };
+
+	
     handleClick = (event) => {
         const buttonValue = event.target.textContent;
         const dbRef = firebase.database().ref(`savedItems`);
@@ -31,6 +31,10 @@ class App extends Component{
 	scrollDown = () => {
 		scroll.scrollMore(100);
 	}
+
+	// setFocus = () => {
+	// 	this.myButtonRef.current.focus();
+	// }
 	
 
   render(){
@@ -40,7 +44,7 @@ class App extends Component{
 				<Header />
 			</header>
 			<main className="contentSection">
-				<section className="AppScreen" id="AppScreen">
+				<section className="AppScreen" id="AppScreen" >
 
 					<div className="Buttons">
 						<div className="vegetableList">
@@ -51,7 +55,7 @@ class App extends Component{
 							/>
 						</div>
 
-						<div className="fruitList">
+						<div className="fruitList" >
 							<Button
 								ingredients={this.state.fruit}
 								handleClick={this.handleClick}
@@ -72,21 +76,17 @@ class App extends Component{
 						duration={1000}
 						smooth={true}
 						onSubmit={this.keyPress}
-					
 						href="#ListScreen"
 					>
 						Get My List!
-			</Link>
-
+					</Link>
 
 				</section>
 				<section className="ListScreen" id="ListScreen">
 					<div className="paper">
 						<div className="pattern">
 							<div className="content">
-								{/* <CurrentDate /> */}
-								
-								<QuickNav/>
+
 								<List />
 
 								<Link
@@ -97,7 +97,7 @@ class App extends Component{
 									offset={-70}
 									smooth={true}
 									href="#AppScreen"
-							
+									
 								>
 									Take me back to the top
 								</Link>
@@ -107,16 +107,15 @@ class App extends Component{
 
 
 				</section>
-				
-			</main>
+
 
 				
-      {/* <button tabIndex="0"> */}
+			</main>
             
       </div>
        
     );
-  }
+  };
   componentDidMount() {
 
     const dbRefVegetables = firebase.database().ref("allVeg");
@@ -159,7 +158,7 @@ class App extends Component{
     });
   }
 
-  }
+}
 
 
 

@@ -97,15 +97,23 @@ button{
 	flex-direction: column
 }
 
+	.AppScreen {
+		padding-top: 5%;
+	}
+
 .contentSection{
 	display: flex;
 }
 
 .AppScreen,
 .ListScreen{
+	height: 100vh;
 	width: 50%;
 }
 
+.ListScreen{
+	overflow-y: scroll;
+}
 
 
 }
