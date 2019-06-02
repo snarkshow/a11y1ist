@@ -16,6 +16,11 @@ ul{
 	padding: 0;
 }
 
+
+html:focus { 
+	outline: solid red;
+}
+
 .groceryList {
 	margin: 20px;
 }
@@ -33,32 +38,30 @@ ul{
 }
 
 
-
-
 button{
 	color: #010203;
 	font-family: 'Open Sans', sans-serif;
-		font-weight: 700;
-		border-radius: 5px;
-		
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-transform: capitalize;
+	font-weight: 700;
+	border-radius: 5px;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: capitalize;
 	}
 
 .vegetableList button{
 		background: #4ba351;
-		/* color: #010203; */
+
 	}
 .fruitList button{
 	background: #e1351b;
-	/* color: #010203; */
+
 
 }
 .proteinList button{
 	background: #E5B73B;
-	/* color: #010203; */
+
 }
 
 .List {
@@ -77,15 +80,6 @@ button{
 	box-shadow: 0px 0px 5px 0px #888;
 }
 
-.paper::before {
-	content: '';
-	width: 1px;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 100px;
-	background-color: rgba(255,0,0,0.6);
-}
 
 .pattern {
 	background-color: #fff;
@@ -93,32 +87,42 @@ button{
 	background-size: 100% 1.2em;
 }
 
-.removeItem{
-	font-size: 0.8rem;
+
+
+
+@media (min-width: 767px){
+
+.App{
+	display: flex;
+	flex-direction: column
+}
+
+.contentSection{
+	display: flex;
+}
+
+.AppScreen,
+.ListScreen{
+	width: 50%;
+}
+
+
 
 }
 
 
-@media (min-width: 600px){
-
-	.groceryList li{
-		text-indent: 120px;
-	}
-
-	.removeItem{
-	margin-right: 100px;
-}
-
-	.paper::before {
-		left: 100px;
-		/* background-color: rgba(255,0,0,0.6); */
-	}
-
-
-}
 @media (min-width: 320px){
 
-	
+	.paper::before {
+		content: '';
+		width: 1px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 60px;
+		background-color: rgba(255,0,0,0.6);
+	}
+
 
 	.groceryButton{ 
 		margin: 10px;
@@ -132,6 +136,33 @@ button{
 		height: 100vh;
 	}
 
+	.GetList{
+		background-color: #1a9d49;
+		border: inset grey 3px;
+		border-radius: 10px;
+		color: white;
+		display: block;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 1.25rem;
+		font-weight: 700;
+		margin: 10px auto;
+		padding: 5px 15px;
+		text-align: center;
+		text-decoration: none;
+		width: 50%;
+	}
+
+	
+	.scrollButtons{
+		background-color: transparent;
+		position: fixed;
+
+	}
+	.scrollButtons a{
+		display: block;
+		position: sticky;
+
+	}
 	.BackToTop{
 		background-color: rgba(41, 41, 41, 0.7);
 		color: white;
@@ -145,7 +176,11 @@ button{
 		width: 100%;
 	}
 
-	
+	.removeItem{
+		background-color: transparent;
+		border: none;
+		font-size: 0.8rem;
+	}	
 	
 }
 

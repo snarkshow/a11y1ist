@@ -14,13 +14,14 @@ class List extends Component {
         const dbRef = firebase.database().ref(`savedItems`);
         dbRef.child(item).remove();
     }
+
     render() {
         return (
             <div>
 
                 <ul className="groceryList">
                     {this.state.userList.map((listItem) => {
-                        return <li key={listItem.key}>  {listItem.name} <a className="removeItem" onClick={() => this.removeItem(listItem.key)}>❌</a></li>
+                        return <li key={listItem.key}>  {listItem.name} <button className="removeItem" tabIndex={0} onClick={() => this.removeItem(listItem.key)} ><span aria-label="click to remove item" role="img">❌</span></button></li>
                     })}
                     
                 </ul>
