@@ -3,7 +3,6 @@ import firebase from './firebase';
 import { Link, animateScroll as scroll } from "react-scroll";
 import Header from './Header.js';
 import Button from './Button.js';
-
 import List from './List.js';
 import './App.css';
 
@@ -18,11 +17,6 @@ class App extends Component{
 			this.myButtonRef = React.createRef();
 
 		};
-
-		setFocus = () => {
-			console.log(this.myButtonRef)
-			this.myButtonRef.current.focus();
-		}
 
 		handleClick = (event) => {
 			const buttonValue = event.target.textContent;
@@ -94,19 +88,11 @@ class App extends Component{
 									>
 										Take me back to the top
 								</Link>
-							
-								
 							</div>
 						</div>
 					</div>
-
-
 				</section>
-
-
-				
 			</main>
-            
       </div>
        
     );
@@ -118,7 +104,7 @@ class App extends Component{
     dbRefVegetables.on('value', (response) => {
 		const newState = [];
 		const data = response.val();
-		console.log(data)
+
       for (let key in data) {
         newState.push(data[key]);
       }
@@ -135,7 +121,6 @@ class App extends Component{
       for (let key in data) {
         newState.push(data[key]);
 	  }
-	  console.log(newState)
       this.setState({
         fruit: newState
       });

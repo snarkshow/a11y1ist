@@ -1,6 +1,6 @@
 import React from 'react';
 import h1logo from './h1logo.svg';
-import clipboard2 from './clipboard2.svg';
+
 
 const Header = () => {
     return (
