@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/repository-name/static/css/main.7f5da9b5.chunk.css",
+    "main.js": "/repository-name/static/js/main.e8668c1b.chunk.js",
+    "main.js.map": "/repository-name/static/js/main.e8668c1b.chunk.js.map",
+    "runtime~main.js": "/repository-name/static/js/runtime~main.f7634681.js",
+    "runtime~main.js.map": "/repository-name/static/js/runtime~main.f7634681.js.map",
+    "static/js/2.edb0a695.chunk.js": "/repository-name/static/js/2.edb0a695.chunk.js",
+    "static/js/2.edb0a695.chunk.js.map": "/repository-name/static/js/2.edb0a695.chunk.js.map",
+    "index.html": "/repository-name/index.html",
+    "precache-manifest.52ddac5388f0ae57be66cc0b774357ca.js": "/repository-name/precache-manifest.52ddac5388f0ae57be66cc0b774357ca.js",
+    "service-worker.js": "/repository-name/service-worker.js",
+    "static/css/main.7f5da9b5.chunk.css.map": "/repository-name/static/css/main.7f5da9b5.chunk.css.map",
+    "static/media/clipboard2.svg": "/repository-name/static/media/clipboard2.33c29231.svg",
+    "static/media/h1logo.svg": "/repository-name/static/media/h1logo.f76a17f7.svg"
+  }
+}
