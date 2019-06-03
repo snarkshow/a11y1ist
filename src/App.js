@@ -74,7 +74,7 @@ class App extends Component{
 					>
 						Get My List!
 					</Link>
-		
+				
 				</section>
 				<section className="ListScreen" id="ListScreen">
 					<div className="paper">

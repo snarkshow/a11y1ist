@@ -47,7 +47,7 @@ header{
 	display: flex;
 	justify-content: space-between;
 	font-family: 'Schoolbell', cursive;
-	font-size: 1.4rem;
+	font-size: 1.5rem;
 	padding: 1px;
 	width: 100%;
 	text-indent: 50px;
@@ -104,7 +104,7 @@ button{
 
 
 @media (min-width: 767px){
-
+	
 
 	.App{
 		display: flex;
@@ -112,7 +112,10 @@ button{
 	}
 
 	.AppScreen {
-		padding: 0 5%;
+		border: 20px solid black;
+		border-radius: 20px;
+		margin: 1% 5%;
+		padding: 2%;
 	}
 
 	.contentSection{
@@ -121,11 +124,12 @@ button{
 
 	.AppScreen,
 	.ListScreen{
-		height: 100vh;
+		height: auto;
 		width: 50%;
 	}
 
 	.ListScreen{
+		margin: 1% 0;
 		overflow-y: scroll;
 	}
 
