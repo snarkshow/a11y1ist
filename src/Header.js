@@ -12,8 +12,8 @@ const Header = () => {
                     <p>AllyList is an accessible grocery list builder. Hit "tab" to navigate, and use "enter" to select or remove items.</p>
                 </div>
                 <div className="skipLinks">
-                    <a href="#AppScreen">Start building a list</a>
-                    <a href="#ListScreen">Go to my current list</a>
+                    <a href="#appScreen">Start building a list</a>
+                    <a href="#listScreen">Go to my current list</a>
                 </div>
                 
                 

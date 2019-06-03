@@ -38,8 +38,8 @@ class App extends Component{
 				<Header />
 			</header>
 			<main className="contentSection">
-				<section className="AppScreen" id="AppScreen" >
-					<div className="Buttons">
+				<section className="appScreen" id="appScreen" >
+					<div className="buttons">
 						<div className="vegetableList">
 							<Button
 								ingredients={this.state.vegetables}
@@ -64,19 +64,19 @@ class App extends Component{
 					</div>
 					<Link
 						tabIndex="0"
-						className="GetList"
-						to="ListScreen"
+						className="getList"
+						to="listScreen"
 						duration={1000}
 						smooth={true}
 						onSubmit={this.keyPress}
-						href="#ListScreen"
+						href="#listScreen"
 
 					>
 						Get My List!
 					</Link>
 				
 				</section>
-				<section className="ListScreen" id="ListScreen">
+				<section className="listScreen" id="listScreen">
 					<div className="paper">
 						<div className="pattern">
 							<div className="content">
@@ -85,12 +85,12 @@ class App extends Component{
 							
 									<Link
 										tabIndex="0"
-										className="BackToTop"
-										to="AppScreen"
+										className="backToTop"
+										to="appScreen"
 										duration={1000}
 										offset={-70}
 										smooth={true}
-										href="#AppScreen"
+										href="#appScreen"
 									>
 										Take me back to the top
 								</Link>
