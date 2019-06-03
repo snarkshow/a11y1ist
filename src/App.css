@@ -16,6 +16,10 @@ ul{
 	padding: 0;
 }
 
+a{
+	text-decoration: none;
+}
+
 *:focus,
 a:focus { 
 	outline: 2px dotted  #a12312 ;
@@ -34,8 +38,34 @@ h1{
 }
 
 header{
+	align-items: center;
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+}
+
+.headerIntro{
+	margin: 0;
+	padding: 0 4%;
+}
+.headerIntro p{
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.skipLinks{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;	
+}
+.skipLinks a{
+	border: 2px inset gray;
+	border-radius: 5px;
+	color: #000000;
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 5px;
+	padding: 0 5px;
 }
 
 .groceryList {
@@ -111,6 +141,16 @@ button{
 		flex-direction: column
 	}
 
+	.skipLinks{	
+		flex-direction: row;
+	}
+
+	.skipLinks a{
+		font-size: 1.25rem;
+		margin: 5px 10px;
+		padding: 5 10px;
+	}
+
 	.AppScreen {
 		box-shadow: 0 0 0 20px black;
 		border-bottom: 60px solid black;
@@ -141,7 +181,7 @@ button{
 @media (min-width: 320px){
 
 	h1 img{
-		margin: 5% auto;
+		margin: 3% auto;
 		width: 275px;
 	}
 

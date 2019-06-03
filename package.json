@@ -2,7 +2,7 @@
   "name": "project5",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/snarkshow/a11y1ist",
+  "homepage": "http://laurachuang.net/project5/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.18",
     "@fortawesome/free-solid-svg-icons": "^5.8.2",

@@ -95,7 +95,7 @@ class App extends Component{
 										Take me back to the top
 								</Link>
 							
-								{/* <Child setFocus={this.setFocus} /> */}
+								
 							</div>
 						</div>
 					</div>
@@ -157,8 +157,5 @@ class App extends Component{
   }
 
 }
-
-
-
 
 export default App;
