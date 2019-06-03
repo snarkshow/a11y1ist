@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/snarkshow/a11y1ist/static/css/main.7f5da9b5.chunk.css",
-    "main.js": "/snarkshow/a11y1ist/static/js/main.4a5b21c9.chunk.js",
-    "main.js.map": "/snarkshow/a11y1ist/static/js/main.4a5b21c9.chunk.js.map",
-    "runtime~main.js": "/snarkshow/a11y1ist/static/js/runtime~main.68fe05d2.js",
-    "runtime~main.js.map": "/snarkshow/a11y1ist/static/js/runtime~main.68fe05d2.js.map",
-    "static/js/2.fc0b9865.chunk.js": "/snarkshow/a11y1ist/static/js/2.fc0b9865.chunk.js",
-    "static/js/2.fc0b9865.chunk.js.map": "/snarkshow/a11y1ist/static/js/2.fc0b9865.chunk.js.map",
-    "index.html": "/snarkshow/a11y1ist/index.html",
-    "precache-manifest.9480c74dd30f61f045cf66eba3fca16b.js": "/snarkshow/a11y1ist/precache-manifest.9480c74dd30f61f045cf66eba3fca16b.js",
-    "service-worker.js": "/snarkshow/a11y1ist/service-worker.js",
-    "static/css/main.7f5da9b5.chunk.css.map": "/snarkshow/a11y1ist/static/css/main.7f5da9b5.chunk.css.map",
-    "static/media/clipboard2.svg": "/snarkshow/a11y1ist/static/media/clipboard2.33c29231.svg",
-    "static/media/h1logo.svg": "/snarkshow/a11y1ist/static/media/h1logo.f76a17f7.svg"
+    "main.css": "/snarkshow/project5/static/css/main.7f5da9b5.chunk.css",
+    "main.js": "/snarkshow/project5/static/js/main.11f22d21.chunk.js",
+    "main.js.map": "/snarkshow/project5/static/js/main.11f22d21.chunk.js.map",
+    "runtime~main.js": "/snarkshow/project5/static/js/runtime~main.96068e87.js",
+    "runtime~main.js.map": "/snarkshow/project5/static/js/runtime~main.96068e87.js.map",
+    "static/js/2.d686235b.chunk.js": "/snarkshow/project5/static/js/2.d686235b.chunk.js",
+    "static/js/2.d686235b.chunk.js.map": "/snarkshow/project5/static/js/2.d686235b.chunk.js.map",
+    "index.html": "/snarkshow/project5/index.html",
+    "precache-manifest.284cde33aee17092d01a9c8eb9d718b6.js": "/snarkshow/project5/precache-manifest.284cde33aee17092d01a9c8eb9d718b6.js",
+    "service-worker.js": "/snarkshow/project5/service-worker.js",
+    "static/css/main.7f5da9b5.chunk.css.map": "/snarkshow/project5/static/css/main.7f5da9b5.chunk.css.map",
+    "static/media/clipboard2.svg": "/snarkshow/project5/static/media/clipboard2.33c29231.svg",
+    "static/media/h1logo.svg": "/snarkshow/project5/static/media/h1logo.f76a17f7.svg"
   }
 }
