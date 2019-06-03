@@ -1,41 +1,35 @@
-import React, { Component} from 'react';
+import React, {Component} from 'react';
 import firebase from './firebase';
 import { Link, animateScroll as scroll } from "react-scroll";
 import Header from './Header.js';
 import Button from './Button.js';
+
 import List from './List.js';
 import './App.css';
 
 class App extends Component{
-  constructor(){
-    super();
-    this.state = {
-      vegetables: [],
-      fruit: [],
-      protein: []
-	}
+	constructor(){
+		super();
+		this.state = {
+			vegetables: [],
+			fruit: [],
+			protein: []
+		}
+			this.myButtonRef = React.createRef();
 
-  };
+		};
 
-	
-    handleClick = (event) => {
-        const buttonValue = event.target.textContent;
-        const dbRef = firebase.database().ref(`savedItems`);
-        dbRef.push(buttonValue);
+		setFocus = () => {
+			console.log(this.myButtonRef)
+			this.myButtonRef.current.focus();
+		}
 
-	}
+		handleClick = (event) => {
+			const buttonValue = event.target.textContent;
+			const dbRef = firebase.database().ref(`savedItems`);
+			dbRef.push(buttonValue);
 
-	scrollUp = () => {
-		scroll.scrollMore(-100);
-	}
-	scrollDown = () => {
-		scroll.scrollMore(100);
-	}
-
-	// setFocus = () => {
-	// 	this.myButtonRef.current.focus();
-	// }
-	
+		}
 
   render(){
     return(
@@ -45,7 +39,6 @@ class App extends Component{
 			</header>
 			<main className="contentSection">
 				<section className="AppScreen" id="AppScreen" >
-
 					<div className="Buttons">
 						<div className="vegetableList">
 							<Button
@@ -77,10 +70,11 @@ class App extends Component{
 						smooth={true}
 						onSubmit={this.keyPress}
 						href="#ListScreen"
+
 					>
 						Get My List!
 					</Link>
-
+		
 				</section>
 				<section className="ListScreen" id="ListScreen">
 					<div className="paper">
@@ -88,19 +82,20 @@ class App extends Component{
 							<div className="content">
 
 								<List />
-
-								<Link
-									tabIndex="0"
-									className="BackToTop"
-									to="AppScreen"
-									duration={1000}
-									offset={-70}
-									smooth={true}
-									href="#AppScreen"
-									
-								>
-									Take me back to the top
+							
+									<Link
+										tabIndex="0"
+										className="BackToTop"
+										to="AppScreen"
+										duration={1000}
+										offset={-70}
+										smooth={true}
+										href="#AppScreen"
+									>
+										Take me back to the top
 								</Link>
+							
+								{/* <Child setFocus={this.setFocus} /> */}
 							</div>
 						</div>
 					</div>
@@ -118,10 +113,12 @@ class App extends Component{
   };
   componentDidMount() {
 
-    const dbRefVegetables = firebase.database().ref("allVeg");
+
+	const dbRefVegetables = firebase.database().ref("allVeg");
     dbRefVegetables.on('value', (response) => {
-      const newState = [];
-      const data = response.val();
+		const newState = [];
+		const data = response.val();
+		console.log(data)
       for (let key in data) {
         newState.push(data[key]);
       }
@@ -137,7 +134,8 @@ class App extends Component{
       const data = response.val();
       for (let key in data) {
         newState.push(data[key]);
-      }
+	  }
+	  console.log(newState)
       this.setState({
         fruit: newState
       });
