@@ -112,9 +112,10 @@ button{
 	}
 
 	.AppScreen {
-		border: 20px solid black;
+		box-shadow: 0 0 0 20px black;
+		border-bottom: 60px solid black;
 		border-radius: 20px;
-		margin: 1% 5%;
+		margin: 3% 5%;
 		padding: 2%;
 	}
 
@@ -131,8 +132,8 @@ button{
 	.ListScreen{
 		margin: 1% 0;
 		overflow-y: scroll;
+		max-height: 650px;
 	}
-
 
 }
 
@@ -165,6 +166,7 @@ button{
 
 	.AppScreen {
 		height: 100vh;
+		max-height: 600px;
 	}
 
 	.GetList{
@@ -191,7 +193,7 @@ button{
 		padding: 10px;
 		position: -webkit-sticky;
 		position: sticky;
-		right: 0; left: 0; bottom: 10px;
+		right: 0; left: 0; bottom: 25px;
 		text-align: center;
 		text-decoration: none;
 		width: 100%;
@@ -203,6 +205,10 @@ button{
 		color:  #a12312 ;
 		font-size: 1.5rem;
 	}	
+
+	.ListScreen{
+		overflow-y: scroll;
+	}
 	
 }
 

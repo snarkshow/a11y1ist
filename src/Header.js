@@ -6,8 +6,8 @@ const Header = () => {
     return (
         <div>
             <header>
-                <h1 aria-label="ally list logo">
-                    <img src={h1logo} alt="ally list logo"/>
+                <h1>
+                    <img src={h1logo} alt="ally list logo" aria-label="ally list logo"/>
                 </h1>
             </header>
             

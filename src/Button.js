@@ -7,7 +7,7 @@ class Button extends Component {
         return (
             <div className="List">
                 {this.props.ingredients.map((ingredient, index) => {
-                    return <button tabIndex={0} className="groceryButton" key={index} onClick={this.props.handleClick} ref={index === 0 ? this.myButtonRef : ''}>{ingredient}</button>
+                    return <button tabIndex={0} className="groceryButton" key={index} alt={ingredient} onClick={this.props.handleClick}>{ingredient}</button>
                 })}
 
             </div>
