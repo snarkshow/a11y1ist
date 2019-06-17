@@ -3,6 +3,7 @@ import firebase from './firebase';
 import { Link, animateScroll as scroll } from "react-scroll";
 import Header from './Header.js';
 import Button from './Button.js';
+
 import List from './List.js';
 import './App.css';
 
@@ -22,8 +23,8 @@ class App extends Component{
 			const buttonValue = event.target.textContent;
 			const dbRef = firebase.database().ref(`savedItems`);
 			dbRef.push(buttonValue);
-
 		}
+
 
   render(){
     return(
@@ -110,8 +111,7 @@ class App extends Component{
       }
       this.setState({
         vegetables: newState
-      });
-  
+	  });
     });
 
     const dbRefFruit = firebase.database().ref("allFruit");

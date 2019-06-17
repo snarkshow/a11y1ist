@@ -30,30 +30,30 @@ a:focus {
 
 /* BACKGROUND */
 body{
-background: #56ab2f;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #a8e063, #56ab2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: url("/greyBG.png");
 }
 
 /* HEADER */
 h1{
-	margin: 0 auto;
+	margin: 10px auto;
 }
 
 header{
 	align-items: center;
 	display: flex;
+	height: auto;
 	justify-content: center;
 	flex-direction: column;
 	width: 100%;
 }
 
-.headerIntro{
+.headerIntro,
+.headerIntro p{
 	margin: 0;
 	padding: 0 4%;
 }
+
 .headerIntro p{
-	margin: 0;
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -63,12 +63,20 @@ header{
 	justify-content: space-around;	
 }
 .skipLinks a{
+
 	border: 2px inset gray;
-	border-radius: 5px;
-	color: #000000;
+	color: #010203;
 	font-family: 'Open Sans', sans-serif;
-	margin-top: 5px;
-	padding: 0 5px;
+	font-weight: 700;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	padding:10px;
+	margin: 10px;
+	height: 50px;
+	align-items: center;
+	text-shadow: 1px 1px 0.5px #808080;
+	text-transform: capitalize;
 }
 
 /* GROCERY BUTTONS */
@@ -141,7 +149,6 @@ button{
 
 
 @media (min-width: 767px){
-	
 
 	.App{
 		display: flex;
@@ -159,6 +166,7 @@ button{
 	}
 
 	.appScreen {
+		background: linear-gradient(-45deg, lightgrey 0%, darkgrey 20.5%, lightgrey 31%, darkgrey 55%);
 		box-shadow: 0 0 0 20px black;
 		border-bottom: 60px solid black;
 		border-radius: 20px;
@@ -181,6 +189,8 @@ button{
 		overflow-y: scroll;
 		max-height: 650px;
 	}
+
+	
 
 }
 

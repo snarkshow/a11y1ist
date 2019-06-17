@@ -9,6 +9,7 @@ class List extends Component {
             userList: [],
         }
     }
+
     
     removeItem = (item) => {
         const dbRef = firebase.database().ref(`savedItems`);
@@ -24,6 +25,7 @@ class List extends Component {
             <div>
                 <ul className="groceryList">
                     {this.state.userList.map((listItem) => {
+                        
                         return <li key={listItem.key} tabIndex={0}>  {listItem.name} 
                                     <button
                                         className="removeItem"
